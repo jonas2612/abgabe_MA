@@ -1,0 +1,27 @@
+sbatch divergence_12_10k_2k_un.cmd
+sbatch divergence_12_10k_2k_in.cmd
+sbatch divergence_12_10k_10k_un.cmd
+sbatch divergence_12_10k_10k_in.cmd
+sbatch divergence_12_10k_all_un.cmd
+sbatch divergence_12_10k_all_in.cmd
+
+sbatch divergence_12_100k_2k_un.cmd
+sbatch divergence_12_100k_2k_in.cmd
+sbatch divergence_12_100k_10k_un.cmd
+sbatch divergence_12_100k_10k_in.cmd
+sbatch divergence_12_100k_all_un.cmd
+sbatch divergence_12_100k_all_in.cmd
+
+sbatch divergence_12_500k_2k_un.cmd
+sbatch divergence_12_500k_2k_in.cmd
+sbatch divergence_12_500k_10k_un.cmd
+sbatch divergence_12_500k_10k_in.cmd
+sbatch divergence_12_500k_all_un.cmd
+sbatch divergence_12_500k_all_in.cmd
+
+sbatch divergence_12_1M_2k_un.cmd
+sbatch divergence_12_1M_2k_in.cmd
+sbatch divergence_12_1M_10k_un.cmd
+sbatch divergence_12_1M_10k_in.cmd
+sbatch divergence_12_1M_all_un.cmd
+sbatch divergence_12_1M_all_in.cmd

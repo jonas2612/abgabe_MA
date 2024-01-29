@@ -1,0 +1,6 @@
+AnnData object with n_obs × n_vars = 10000 × 24552 backed at '/lustre/groups/ml01/workspace/monge_velo/data/mouse_gastrulation_atlas/training/adata_10k.h5ad'
+    obs: 'cell_id', 'keep', 'day', 'embryo_id', 'experimental_batch', 'batch', 'cell_cluster', 'celltype', 'cellcluster_moscot'
+    var: 'gene_type', 'celltype', 'chr'
+    uns: 'neighbors'
+    obsm: 'X_pca'
+    obsp: 'connectivities', 'distances'

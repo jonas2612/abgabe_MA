@@ -1,0 +1,3 @@
+,n_obs,n_genes,time,divergence,divergence_ref
+0,1M,2k_genes,"8.5, 12.0",8.0802376e-05,427462.12
+1,1M,2k_genes,"8.5, 12.0",37013.96,19627.553

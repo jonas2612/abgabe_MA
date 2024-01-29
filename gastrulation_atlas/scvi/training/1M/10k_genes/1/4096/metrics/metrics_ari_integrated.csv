@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,1000000,1M,10k_genes,1,4096,ari_integrated,0.5921857891466243

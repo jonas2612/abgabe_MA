@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#SBATCH -o /home/icb/jonas.flor/gastrulation_atlas/scvi/training/bash_messages/outputs_data_prep_all
+#SBATCH -e /home/icb/jonas.flor/gastrulation_atlas/scvi/training/bash_messages/errors_data_prep_all
+#SBATCH -J data_prep_all
+#SBATCH -p cpu_p
+#SBATCH --qos=cpu_normal
+#SBATCH --mem=150G
+#SBATCH -t 1-00:00:00
+#SBATCH --nice=100000
+
+
+source $HOME/.bashrc
+
+mamba activate scvi
+python /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/data_preparation.py all_genes
+
+path="$(grep -iE 'killed' /home/icb/jonas.flor/gastrulation_atlas/scvi/training/bash_messages/errors_data_prep_all)"
+if [ -z "$path" ]
+then
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/preprocessing_all.cmd
+    echo "Done!"
+else
+    echo "Error produced"
+fi
+                        
+                        

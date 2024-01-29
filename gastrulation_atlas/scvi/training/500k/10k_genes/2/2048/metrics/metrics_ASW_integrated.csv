@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,500000,500k,10k_genes,2,2048,ASW_integrated,0.7235024645924568

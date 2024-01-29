@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,500000,500k,all_genes,1,256,graph_conn_integrated,0.9714055497727363

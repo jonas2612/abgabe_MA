@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,500000,500k,all_genes,1,512,cLISI_unintegrated,0.9943906996264658

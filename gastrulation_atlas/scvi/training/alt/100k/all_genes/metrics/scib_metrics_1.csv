@@ -1,0 +1,2 @@
+,n_obs,hgv_overlap,pcr_unintegrated,pcr_integrated,traject_conversation,graph_connectivity_unintegrated,graph_connectivity_integrated,silhouette_unintegrated,silhouette_integrated,silhouette_batch_unintegrated,silhouette_batch_integrated,ASW_unintegrated,iLISI_integrated,iso_labels_unintegrated
+0,100000,0.5196183295279563,0.13787306902826613,0.1398110588548059,0.8915568860451395,0.6813737937118542,0.44244631491025005,0.3408406595052692,0.42400912940502167,0.6655240725473073,0.7774816724215396,0.5,0.10492783794706213,0.003433851886878586

@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,500000,500k,2k_genes,1,2048,pcr_integrated,0.06862349345159811

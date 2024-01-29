@@ -1,0 +1,48 @@
+#!/bin/bash
+
+#SBATCH -o /home/icb/jonas.flor/gastrulation_atlas/scvi/training/bash_messages/outputs_prep_all
+#SBATCH -e /home/icb/jonas.flor/gastrulation_atlas/scvi/training/bash_messages/errors_prep_all
+#SBATCH -J prep_all
+#SBATCH -p cpu_p
+#SBATCH --qos=cpu_normal
+#SBATCH --mem=150G
+#SBATCH -t 15:00:00
+#SBATCH --nice=100000
+
+
+source $HOME/.bashrc
+
+mamba activate scvi
+python /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/preprocessing.py all_genes
+
+path="$(grep -iE 'killed' /home/icb/jonas.flor/gastrulation_atlas/scvi/training/bash_messages/errors_prep_all)"
+if [ -z "$path" ]
+then                    
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_ari_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_ari_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_ASW_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_ASW_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_cLISI_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_cLISI_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_graph_connectivity_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_graph_connectivity_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_hgv_overlap_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_iLISI_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_iLISI_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_iso_labels_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_iso_labels_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_nmi_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_nmi_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_pcr_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_pcr_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_silhouette_batch_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_silhouette_batch_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_silhouette_integrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_silhouette_unintegrated_all
+    sbatch /home/icb/jonas.flor/gastrulation_atlas/scvi/training/model_1M_final/metric_traject_conservation_all
+    echo "Done!"
+else
+    echo "Error produced"
+fi
+                        
+                        

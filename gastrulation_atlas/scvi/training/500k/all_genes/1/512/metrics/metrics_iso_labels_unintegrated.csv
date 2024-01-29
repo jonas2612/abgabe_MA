@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,500000,500k,all_genes,1,512,iso_label_f1_unintegrated,0.0007698808288410209

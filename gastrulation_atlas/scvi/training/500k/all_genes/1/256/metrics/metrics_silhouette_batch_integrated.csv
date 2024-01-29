@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,500000,500k,all_genes,1,256,silhouette_batch_integrated,0.8756302676392905

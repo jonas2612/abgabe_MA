@@ -1,0 +1,2 @@
+,n_obs,n_cells,n_genes,n_layers,n_hidden,metric,value
+0,10000,10k,all_genes,1,1024,hgv_overlap,0.34092988547400505
